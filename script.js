@@ -90,17 +90,40 @@ function addToCart(id) {
         alert('Por favor, selecione uma quantidade maior que zero.');
     }
 }
+document.addEventListener('DOMContentLoaded', function() {
+  var menuHamburguer = document.getElementById('menu-hamburguer');
+  var menuDropdown = document.getElementById('menu-dropdown');
+  var submenuToggles = document.querySelectorAll('.submenu-toggle');
 
-function abreMenu()
-	{
-		document.getElementById("menu-lateral").style.width = "60%";
-    document.getElementById("menu-lateral").style.height = "50%";
-		document.getElementById("corpo").style.marginLeft = "1%";
-	}
-	
-	function fechaMenu()
-	{
-		document.getElementById("menu-lateral").style.width = "0%";
-    document.getElementById("menu-lateral").style.height = "0%";
-		document.getElementById("corpo").style.marginLeft= "0%";
-	}
+  menuHamburguer.addEventListener('click', function() {
+      menuDropdown.classList.toggle('active');
+  });
+
+  submenuToggles.forEach(function(toggle) {
+      toggle.addEventListener('click', function(event) {
+          event.preventDefault();
+          var submenuItem = toggle.parentElement;
+          submenuItem.classList.toggle('active');
+
+          // Fecha outros submenus abertos
+          submenuToggles.forEach(function(otherToggle) {
+              if (otherToggle !== toggle) {
+                  var otherSubmenuItem = otherToggle.parentElement;
+                  otherSubmenuItem.classList.remove('active');
+              }
+          });
+      });
+  });
+
+  window.addEventListener('click', function(event) {
+      if (!event.target.matches('#menu-hamburguer') && !event.target.closest('.menu-dropdown')) {
+          menuDropdown.classList.remove('active');
+          submenuToggles.forEach(function(toggle) {
+              var submenuItem = toggle.parentElement;
+              submenuItem.classList.remove('active');
+          });
+      }
+  });
+});
+
+

@@ -6,6 +6,8 @@
 		<meta name="author" content="Grupo do TCM"/>
         <title>Vinotália</title>
         <link rel="stylesheet" type="text/css" href="vino.css"/>
+        <link rel="website icon"  type="png"
+        href="Vinotália-pprt.png">
         
     </head>
     <body>
@@ -46,7 +48,7 @@
             <div class="razao">
                 <img src="Captura de tela 2024-05-26 134628.jpg" alt="">
             </div>
-            <nav>
+            <nav class="principal">
                 <ul>
                     <li><a href="#">HOME</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
                     <li><a href="#sobrenos">SOBRE NÓS</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
@@ -58,35 +60,34 @@
                             <li><a href="#vinhos">VINHO SUAVE </a></li>
                         </ul>
                     </li>
-                    <li><a href="#contato">CONTATO</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                    <li><a href="#contato">CONTATO</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
                 </ul>
                     <li><a href="https://www.instagram.com/vinotalia.co" target="_blank"><img src="icons8-instagram-50.png" alt="Instagram"></a></li>    
             </nav>
-            <div class="btnabre">
-                <li><a href="#" class="abre" onClick="abreMenu()"><img src="icons8-cardápio-50 (1).png"></a></li>
+      
+           
+            <div class="bar">
+                <div class="menu-hamburguer" id="menu-hamburguer">
+                    <div class="linha"></div>
+                    <div class="linha"></div>
+                    <div class="linha"></div>
+                </div>
+                <ul class="menu-dropdown" id="menu-dropdown">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#sobrenos">SOBRE NÓS</a></li>
+                    <li class="submenu-item">
+                        <a href="#vinhob" class="submenu-toggle">VINHOS</a>
+                        <ul class="submenu-dropdown">
+                            <li><a href="#vinhob">VINHO BRANCO SECO</a></li>
+                            <li><a href="#vinhot">VINHO TINTO SECO</a></li>
+                            <li><a href="#vinhof">VINHO FRISANTE</a></li>
+                            <li><a href="#vinhos">VINHO SUAVE </a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#contato">CONTATO</a></li>
+                </ul>
             </div>
             <div class="logo"> <img src="Vinotália-pprt.png"></div>
-        <div class="midia">
-        <aside id="menu-lateral"> 
-        <ul> 
-            <li><a href="javascript:void(0)" class="closebtn" onClick="fechaMenu()"><img src="icons8-excluir-24.png"></a></li>
-            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-            <li><a href="#">HOME</a></li>
-            <li><a href="#sobrenos">SOBRE NÓS</a></li>
-            <li><a href="#">VINHOS</a>
-                <ul>
-                    <li><a href="#vinhob">VINHO BRANCO SECO</a></li>
-                    <li><a href="#vinhot">VINHO TINTO SECO</a></li>
-                    <li><a href="#vinhof">VINHO FRISANTE</a></li>
-                    <li><a href="#vinhos">VINHO SUAVE </a></li>
-                </ul>
-            </li>
-            <li><a href="#contato">CONTATO</a></li>
-        </ul>
-        </aside>
-    </div>
     </header>
         <div id="sobrenos" class="background" class="caixa-marrom">
             <h1>HISTÓRIA DA VINOTÁLIA</h1>
